@@ -3,11 +3,11 @@ name: Deploy Vite SPA to GitHub Pages
 on:
   push:
     branches:
-      - main    
+      - main
   workflow_dispatch:
 
 permissions:
-  contents: write  
+  contents: write
   pages: write
   id-token: write
 
@@ -22,7 +22,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: "8.2"
           extensions: mbstring, intl, pdo_mysql
           coverage: none
 
@@ -33,10 +33,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'  
+          node-version: "20"
 
       - name: Install NPM dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Vite SPA
         run: npm run build
