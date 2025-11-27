@@ -1,0 +1,11 @@
+/* nav menu  */
+.thins {
+    display: none;
+}
+
+/* Responsive breakpoint */
+@media screen and (min-width: 1200px) {
+    .thins {
+        display: inline-block;
+    }
+}
