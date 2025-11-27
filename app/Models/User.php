@@ -45,4 +45,15 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function isSuperUser()
+    {
+        return $this->role === 'superuser';
+    }
+
+    public function isUser()
+    {
+        return $this->role === 'user';
+    }
+
 }
